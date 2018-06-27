@@ -18,8 +18,16 @@ select {
     margin: 20px;
     border: none;
     font-size: 1.1rem;
+    padding: 0 20px;
     background-image: linear-gradient(to right, #2ffc59, #8fe316, #bac800, #d5ac00, #e48f0b);
     color: black;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
+}
+
+select:hover {
+    cursor: pointer ;
 }
 
 #cityinfos {

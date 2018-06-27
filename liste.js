@@ -72,6 +72,11 @@ window.addEventListener('load', ()=>{
             {                                
                 let departements = JSON.parse(xhr.responseText);
 
+                let option = document.createElement('option');
+                option.innerHTML = 'Choisir un département';
+                option.value = '';
+                departementsSelect.appendChild(option);
+
                 for (let i = 0; i < departements.length; i++)
                 {
                     const departement = departements[i];
@@ -116,6 +121,11 @@ window.addEventListener('load', ()=>{
             if(xhr.status === 200)
             {            
                 let cities = JSON.parse(xhr.responseText);
+
+                let option = document.createElement('option');
+                    option.innerHTML = 'Choisir une ville';
+                    option.value = '';
+                    citySelect.appendChild(option);
                 
                 for (let i = 0; i < cities.length; i++) {
                     const city = cities[i];
