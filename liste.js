@@ -160,17 +160,22 @@ window.addEventListener('load', ()=>{
                 let city = JSON.parse(xhr.responseText);
                 console.log(city);
 
-                let ul = document.createElement('ul');
-
-                let li = document.createElement('li');
-                li.innerHTML = 'Nom de ville : ' + city.ville_nom_reel;
-                ul.appendChild(li);
-                cityInfo.appendChild(ul);
+                //let ul = document.createElement('ul');
+                //let li = document.createElement('li');
+                let p = document.createElement('p');
+                p.innerHTML = '<strong> Nom : </strong>' + city.ville_nom_reel + '<br>' +
+                              '<strong> Departement : </strong>' + city.ville_departement + '<br>' +
+                              '<strong> Code postale : </strong>' + city.ville_code_postal + '<br>' +
+                              '<strong> Population : </strong>' + city.ville_population + ' habitants<br>' +
+                              '<strong> Surface : </strong>' + city.ville_surface + 'km2<br>' ;
+                              
+                if (cityInfo.childElementCount !== 0) {
+                    cityInfo.removeChild(cityInfo.firstChild);
+                }
                 
-                
+                cityInfo.appendChild(p);
 
-
-
+                console.log(cityInfo.childElementCount);
             } 
         }
 
@@ -180,7 +185,4 @@ window.addEventListener('load', ()=>{
 
         xhr.send(params);
     }
-
-
-
 }); // end of onload

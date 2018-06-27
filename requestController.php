@@ -5,7 +5,7 @@ header('Content-Type:text/plain');
 
 
 $user_name = 'root';
-$db_password='';
+$db_password='root';
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=liste_chainee;charset=UTF8", $user_name, $db_password);
