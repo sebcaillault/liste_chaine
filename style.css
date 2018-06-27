@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(219, 219, 219);
+}
+
+.selects {
+    display: flex;
+    background-color: rgb(75, 75, 75);
+}
+
+select {
+    height: 30px;
+    width: 150px;
+    margin: 20px;
+}
